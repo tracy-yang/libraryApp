@@ -1,0 +1,93 @@
+@font-family:"microsoft yahei";
+@font-size:14px;
+@backgroundColor:#f2f2f2;
+@h3-size:16px;
+@dark-green:#009B72;
+@primary-font:#333;
+@color:#03B074;
+
+body *{
+    font-family: @font-family;
+    font-size:@font-size;
+}
+
+/*轮播*/
+.banner {
+    img{
+        width:100%;  
+        display: block; 
+    }
+}
+
+/*导航列表*/
+.home-operation{
+    //background: @backgroundColor;
+    display: flex;
+    flex-wrap: wrap;
+    padding:4px 0;
+    border-bottom: #f2f2f2 solid 1px;
+    div{
+        width: 25%;
+        text-align: center;
+        i{
+            font-size:30px;
+            color:@dark-green;
+        }
+        p{
+            margin: 0;
+            color:@primary-font;
+        }
+    }
+}
+
+/*书的列表*/
+.bookWrapper{
+    background:@backgroundColor;
+    &>div{
+        background:#fff;
+    }
+    &>div:not(:first-of-type){
+        margin-top: 0.5rem;
+    }
+}
+h3{
+    padding:0 !important;
+    margin: 0 !important;
+    font-size:@h3-size !important;
+    font-family: @font-family !important;
+    padding:10px 0 !important;   
+}
+
+h3:before{
+    content: "|";
+    font-weight: bolder;
+    color:@dark-green;
+    padding: 0 6px;
+}
+
+
+.newBookLists{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+.bookItem{
+    width: 6rem;
+    padding:0.5rem;
+    text-align: center;
+    &>.imgWrapper{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    &>.bookName{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        padding:0 0.5rem;  
+    }
+}
+ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated{
+    color:@color !important;
+}

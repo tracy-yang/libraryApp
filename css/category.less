@@ -1,0 +1,52 @@
+.cateWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    background:#f2f2f2;
+    &>div{
+     
+        width: 50%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .cateInfo{
+        padding:10px 0;
+        background:#fff;
+        margin-right: 3px;
+        margin-bottom: 3px;
+    }
+}
+
+/*********分类详情页*******************/
+.categoryItem{
+    &>h2{
+       font-size:14px !important ;
+    }
+    &>p{
+        font-size:12px !important;   
+    }
+}
+
+.categroySearch{
+    background:#fff;
+    display: flex;
+    height: 32px;
+    width:8.5rem;
+    
+    &>i{
+       width: 1rem;
+       font-size: 18px;
+       line-height: 32px;
+       color:#ccc;
+       padding-left:4px;
+    }
+    &>input[type=text]{
+        display: inline-block !important;
+        flex: 1;
+        padding:0 !important;
+        margin:0 !important ;
+        height: 32px;
+               
+    }
+}

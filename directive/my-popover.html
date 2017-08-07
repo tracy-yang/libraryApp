@@ -1,0 +1,10 @@
+<ion-popover-view>
+	<ion-header-bar>
+	  <h1 class="title regionTitle" >请选择区域</h1>
+	</ion-header-bar>
+	<ion-content>
+	  <p ng-repeat="i in region.regionList" class="regionList" on-touch="chooseRegion(i)"> 
+	  	{{i.name}}
+	  </p>
+	</ion-content>
+</ion-popover-view>

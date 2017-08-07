@@ -1,0 +1,90 @@
+.item-checkbox {
+  padding: 6px 0;
+  padding-left: 45px;
+}
+.list > .cartList {
+  display: flex;
+}
+.list > .cartList > .bookChk {
+  width: 1rem;
+}
+.list > .cartList > .bookItem {
+  flex: 1;
+}
+.list > .cartList .item {
+  border: none;
+}
+.list > .cartList .item p {
+  padding-left: 50px !important;
+  font-size: 12px;
+}
+.list > .cartList .item h2 {
+  padding-left: 50px !important;
+  font-size: 14px;
+}
+.list > .cartList:last-of-type {
+  margin-bottom: 45px;
+}
+.checkbox input:checked:before,
+.checkbox input:checked + .checkbox-icon:before {
+  background: #03b074;
+  border: #03b074;
+}
+h2 {
+  font-family: "microsoft yahei";
+  font-size: 14px;
+}
+.cartEmpty {
+  text-align: center;
+}
+.cartEmpty > p {
+  color: #b2b2b2;
+  font-size: 12px;
+  padding: 6px 0;
+}
+.settle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 49px;
+  border-bottom: none !important;
+  display: flex;
+  background: #fff;
+}
+.settle .noPadding {
+  padding: 0 0 0 50px;
+  margin: 0;
+  height: 42px;
+  line-height: 42px;
+  width: 3rem;
+  border: none;
+}
+.settle .order {
+  display: inline-block;
+  width: 5rem;
+  background: #03b074;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: #fff;
+  height: 42px;
+  text-align: center;
+  line-height: 42px;
+}
+.settle .lnkGroup {
+  flex: 1;
+  text-align: right;
+  line-height: 42px;
+}
+.settle .lnkOperation {
+  padding: 4px 8px;
+  border: #f2f2f2 solid 1px;
+  border-radius: 4px;
+  color: #666;
+  font-size: 14px;
+  margin-right: 0.5rem;
+}
+.settle .lnkOperation:first-of-type {
+  color: #666;
+  margin-right: 0.5rem;
+}

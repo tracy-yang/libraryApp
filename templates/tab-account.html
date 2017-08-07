@@ -1,0 +1,49 @@
+<ion-view view-title="借书架" >
+	<!--借书架右边的按钮-->
+	 <ion-nav-buttons side="right">
+        <div class="buttons" ng-click="cart.editState=!cart.editState">
+            <button class="button button-clear font_16_14">
+                	<i class="icon ion-ios-gear-outline"></i>
+            </button>
+        </div>
+    </ion-nav-buttons>
+  <ion-content class="bgColor">
+  	<!--借阅列表(有借阅记录)-->
+    <div class="list">
+    	<div class="cartList" ng-repeat="i in cart.cartList">
+    		<ion-checkbox ng-model="i.isChecked" class="bookChk" ng-click="singleCheck()"></ion-checkbox><br />
+    		<a class="item item-thumbnail-left" ng-click="toBookDetail($event,i)" class="bookItem">
+	          <img ng-src="{{i.bookInfo.cover}}">
+	          <h2>{{i.bookInfo.name}}</h2>
+	          <p>作者：{{i.bookInfo.author.name}}</p>
+	          <p>出版社:{{i.bookInfo.publisher.name}}</p>
+	          <p>出版时间:{{i.bookInfo.publishDate}}</p>
+	        </a>
+    	</div>
+    </div>
+    
+    <!--空的借阅记录-->
+    <div class="cartEmpty" ng-if="cart.cartList==null">
+    	<img src="img/emptybox.png" alt="" />
+    	<p>只有借阅了才有借阅记录哟~</p>
+    </div>
+    
+  </ion-content>
+  	<!--结算-->
+	<div class="settle" ng-if="cart.cartList !=null">
+		<ion-checkbox  class="noPadding" ng-model="cart.all" ng-click="checkAll()">
+			<label for="">全选</label>
+	    </ion-checkbox>
+	    <span class="lnkGroup" ng-click="cart.order()"><a href="" class="order">去借阅</a></span>
+	</div>
+	
+	<!--编辑-->
+	<div class="settle" ng-if="cart.editState">
+		<ion-checkbox  class="noPadding" id="chkAll" ng-model="cart.all" ng-click="checkAll()">
+			<label for="chkAll">全选</label>
+	    </ion-checkbox>
+	    <span class="lnkGroup">
+			<a class="lnkOperation" ng-click="cart.toCollection()">移入收藏</a><a class="lnkOperation" ng-click="delete()">删除</a>
+		</span>
+	</div>
+</ion-view>

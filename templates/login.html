@@ -1,0 +1,34 @@
+<ion-view view-title="登录" hide-tabs="true">
+  <ion-content class="bgColor">
+  	
+  <div class="loginBg">
+  	<img src="img/2.png" alt="" />
+  </div>
+		
+	<!--登录-->
+	<form novalidate name="frm">
+		<div class="loginWrapper">
+			<div>
+				<label for="">账号</label>
+				<input type="text" placeholder="请输入手机号" ng-model="user.name" name="txtName" required/>
+			</div>
+			<div>
+				<label for="">密码</label>
+				<input type="password" placeholder="请输入密码" ng-model="user.pwd" name="txtPwd" required/>
+			</div>
+			<div >
+				<span ng-show="frm.txtName.$dirty && frm.txtName.$error.required">用户信息不能为空！</span>
+				<span ng-show="frm.txtPwd.$dirty && frm.txtPwd.$error.required">用户信息不能为空！</span>
+				<span ng-show="user.code != 1">{{user.errorMessage}}</span>
+			</div>
+			<div>
+				<input type="button" class="button loginBtn " ng-disabled="frm.txtName.$invalid || frm.txtPwd.$invalid" ng-class="{disabled:frm.txtName.$invalid || frm.txtPwd.$invalid}" value="登录" ng-click="login()">
+			</div>
+			<div>
+				<a href="">忘记密码？</a>
+			</div>
+		</div>
+	</form>
+	
+  </ion-content>
+</ion-view>

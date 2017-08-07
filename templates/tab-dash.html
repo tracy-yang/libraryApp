@@ -1,0 +1,56 @@
+<ion-view hide-nav-bar="true">
+	<ion-content > 
+		<!--搜索框-->
+		<nav-for-search  class="bar bar-header"></nav-for-search>
+	
+		<!--轮播广告-->
+   	<ion-slide-box auto-play="true" does-continue="true" slide-interval=2000>  
+      <ion-slide>  
+        <div class="box banner"><img src="img/ban6.jpg" /> </div>  
+      </ion-slide>  
+      <ion-slide>  
+        <div class="box banner"><img src="img/ban7.jpg" /></div>  
+      </ion-slide>  
+      <ion-slide on-slide-changed="slideHasChanged(index)">  
+        <div class="box banner"><img src="img/ban8.jpg" /></div>  
+      </ion-slide>  
+    </ion-slide-box>  
+    <!--轮播广告结束-->
+    
+    <!--导航列表-->
+	  <div class="home-operation">
+	  	<div>
+	  		<i class="ion-ios-book-outline"></i>
+	  		<p>借书架</p>
+	  	</div>
+	  	<div>
+	  		<i class="ion-ios-bookmarks-outline"></i>
+	  		<p>当前借阅</p>
+	  	</div>
+	  	<div>
+	  		<i class="ion-ios-chatbubble-outline"></i>
+	  		<p>消息</p>
+	  	</div>
+	  	<div>
+	  		<i class="ion-qr-scanner"></i>
+	  		<p>扫一扫</p>
+	  	</div>
+	  </div>
+	  <!--导航操作结束-->
+	  
+	<!--书的列表--> 
+	<div class="bookWrapper">
+	  <div ng-repeat="item in bookList">
+	  	<h3>{{item.name}}</h3>
+		  <div class="newBookLists" >
+		  	<div class="bookItem" ng-repeat="i in item.bookInfos" ng-click="toDetail(i)">
+		  		<div class="imgWrapper">
+		  			<img ng-src="{{i.cover}}" alt="" />
+		  		</div>
+		  		<p class="bookName">{{i.name}}</p>
+		  	</div>
+		  </div>
+	  </div>
+	</div>
+ </ion-content>
+</ion-view>

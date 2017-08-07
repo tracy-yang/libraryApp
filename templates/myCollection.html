@@ -1,0 +1,33 @@
+<ion-view view-title="我的收藏" hide-tabs="true">	
+	  <ion-nav-buttons side="right">
+        <div class="buttons">
+       	 <button class="button button-icon  ion-ios-gear-outline"
+          ng-click="data.showDelete = !data.showDelete"></button>
+      </div>
+    </ion-nav-buttons>
+    
+  <ion-content class="padding"> 
+  	<!--搜索框-->
+  	<div class="collectionSearch row">
+  		<input type="text" placeholder="输入书名进行查询"  class="col col-90" ng-model="data.bookName" ng-blur="collection.getCollectionBySearch()"/><i class="ion-ios-search col col-10" ng-click="collection.getCollectionBySearch()"></i>
+  	</div>
+		<!---收藏列表-->
+    <div class="collectionList" ng-repeat="i in collection.collectionList" >
+  	 	<ion-checkbox ng-show="data.showDelete" class="checkboxInlineBlock" ng-model="i.isChecked" ng-click="method.checkSingle()"></ion-checkbox>
+	  	<div>
+	  	 	<a class="item item-thumbnail-left collectionItem" ui-sref="bookDetail({cateId:'{{i.bookInfo.id}}'})">
+	          <img ng-src="{{i.bookInfo.cover}}">
+	          <h2>{{i.bookInfo.name}}</h2>
+	          <p>作者：{{i.bookInfo.author.name}}</p>
+	          <p>出版社:{{i.bookInfo.publisher.name}}</p>
+	          <p>出版时间:{{i.bookInfo.publishDate}}</p>
+	        </a>
+	  	</div>
+    </div>
+  </ion-content>
+  <!--取消关注-->
+  <div class="delForCollection" ng-show="data.showDelete">
+  	<ion-checkbox ng-show="data.showDelete" class="checkboxInlineBlock" ng-model="data.chkAll" ng-click="method.checkAll()">全选</ion-checkbox>
+  	<button ng-click="collection.delCollection()">取消关注</button>
+  </div>
+</ion-view>

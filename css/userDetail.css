@@ -1,0 +1,115 @@
+.userDetailInfo > div {
+  padding: 10px 0;
+  border-bottom: #f2f2f2 solid 1px;
+  display: flex;
+}
+.userDetailInfo > div > div {
+  font-size: 12px;
+}
+.userDetailInfo > div > div:first-of-type {
+  color: #999;
+  width: 2rem;
+}
+.userDetailInfo > div > div:nth-of-type(2) {
+  flex: 1;
+  text-align: right;
+  color: #333;
+}
+.userDetailInfo > div > div:last-of-type {
+  width: 1rem;
+  text-align: center;
+}
+.userDetailInfo > div .userDetailImgWrapper {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+}
+.userDetailInfo > div .userDetailImgWrapper > img {
+  width: 100%;
+}
+/**************修改密码*******************/
+.editUserDetailInfo > div {
+  padding-bottom: 10px;
+}
+.editUserDetailInfo > div > label {
+  font-size: 14px;
+  color: #666;
+}
+.editUserDetailInfo > div:nth-of-type(3) {
+  padding-bottom: 5px;
+}
+.editUserDetailInfo .userInputInfo {
+  padding: 6px 0 3px 0;
+  border-bottom: #f2f2f2 solid 1px;
+  display: flex;
+}
+.editUserDetailInfo .userInputInfo > input[type=password],
+.editUserDetailInfo .userInputInfo > input[type=text] {
+  flex: 1;
+  font-size: 12px;
+  font-family: "microsoft yahei";
+  color: #333;
+}
+.editUserDetailInfo .userInputInfo > span {
+  display: inline-block;
+  width: 1rem;
+  text-align: center;
+  font-size: 18px;
+  line-height: 34px;
+}
+.editUserDetailInfo .userInputInfo > span > i.ion-ios-checkmark {
+  color: #09bb07;
+}
+.editUserDetailInfo .userInputInfo > span > i.ion-ios-close-outline {
+  color: #ccc;
+}
+.editUserDetailInfo input[type=button] {
+  border: none;
+  padding: 8px 0;
+}
+.editUserDetailInfo .errorMessage {
+  height: 25px;
+  font-size: 12px;
+  color: #E64340;
+  padding-bottom: 5px;
+}
+/****************修改手机号******************/
+.userDetailCode {
+  display: flex;
+  border-bottom: #f2f2f2 solid 1px;
+  padding-bottom: 5px;
+}
+.userDetailCode > input[type=text] {
+  display: inline-block;
+  font-size: 12px;
+  color: #333;
+  font-family: "microsoft yahei";
+  flex: 1;
+}
+.userDetailCode > button {
+  border: #ddd solid 1px;
+  color: #666;
+  background: none;
+  font-size: 12px;
+  font-family: "microsoft yahei";
+  padding: 4px 8px;
+  width: 4rem;
+}
+.userDetailCode .actived {
+  border: #E64340 solid 1px;
+  color: #E64340;
+}
+.userDetailCode i.ion-ios-close-outline {
+  display: inline-block;
+  line-height: 34px;
+  width: 1rem;
+  text-align: center;
+  font-size: 18px;
+  color: #ccc;
+}
+/**************头像上传***********************/
+.action-sheet button {
+  font-size: 14px !important;
+  color: #444 !important;
+  font-family: "microsoft yahei";
+}

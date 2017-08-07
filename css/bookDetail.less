@@ -1,0 +1,109 @@
+@backgroundColor:#f2f2f2;
+@modelBackgroundColor:#fff;
+.bookDetailWrapper{
+    &>div:first-of-type{
+        background:@modelBackgroundColor;
+        text-align: center;
+    }
+}
+.bookDetailImgWrapper{
+    width:200px;
+    height: 200px;
+    text-align: center;
+    display: inline-block;
+    &>img{
+        width: 100%;
+    }
+}
+
+.bookDetailInfo{
+    background:@backgroundColor;
+    &>.bookDetailBaseInfo{
+        background:@modelBackgroundColor;
+        padding:0 0.5rem !important;
+       &>h2{
+        font-size: 16px;
+       }
+       &>p:first-of-type{
+           font-size: 12px;
+           color:#666;
+           border-bottom: #f2f2f2 solid 1px;
+       }
+       &>p:not(:first-of-type){
+           padding:0.3rem 0 !important; 
+           border-bottom: @backgroundColor solid 1px;
+       }
+       span:first-of-type{
+          color:#666;
+        }
+//      span:last-of-type{
+//          color:#333;
+//      }
+      
+    }
+    
+    &>div:not(:first-of-type){
+        margin-top: 10px;
+        background:@modelBackgroundColor;
+        &>h3{
+            border-bottom: #f2f2f2 solid 1px;
+        }
+        &>p{
+            padding:0.5rem !important;
+            line-height: 22px;
+            color:#333;
+        }
+ 
+    }
+    /*显示为空的时候的样式*/
+    p.empty{
+       color:#999 !important;
+    }
+    &>div:last-of-type{
+        margin-bottom: 45px;
+    }
+
+}
+
+
+/*********底部操作栏************/
+.bookDetailOperation{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    height: 42px;
+    //line-height: 42px;
+    background:@modelBackgroundColor;
+    border-top:@backgroundColor solid 1px;
+    &>div:first-of-type{
+        width: 7rem;
+        display: flex;
+        text-align: center;
+        &>div{
+            flex: 1;
+            
+            &>i{
+                font-size: 20px;
+                color:#666;
+            }
+            &>p{
+                font-size: 12px;
+                color:#444;
+            }
+        }
+    }
+    &>div:nth-of-type(2){
+        text-align: center;
+        flex: 1;
+        &>a{
+            line-height: 42px;
+            display: inline-block;
+            width: 100%;
+            background: #03B074;
+            color:#fff;
+        }
+    }
+}
+

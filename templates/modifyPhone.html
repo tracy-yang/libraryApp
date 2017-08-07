@@ -1,0 +1,28 @@
+<ion-view view-title="修改手机号">
+  <ion-content class="padding" >
+  	<form name="frm" novalidate>
+  		<div class="editUserDetailInfo">
+		   <div>
+		   		<label for="">手机号</label>
+		   		<div class="userInputInfo">
+		   			<input type="text" required pattern="^1[35784]\d{9}$" name="txtPhone" ng-model="user.phone" placeholder="请输入新手机号"/><span ng-if="frm.txtPhone.$valid"><i class="ion-ios-checkmark"></i></span><span ng-if="frm.txtPhone.$dirty" ng-click="deletePhone()"><i class="ion-ios-close-outline"></i></span>
+		   		</div>
+		   </div>
+		   <div>
+		   	<label for="">验证码</label>
+		   	<div class="userDetailCode">
+		   		<input type="text" required placeholder="请输入验证码" name="txtCode"  ng-model="user.inputCode"/><span ng-if="frm.txtCode.$dirty" ng-click="deleteCode()"><i class="ion-ios-close-outline"></i></span><button ng-click="getCode()" ng-class="{actived:user.code}"  ng-disabled="user.code">{{user.message}}</button>
+		   	</div>
+		  	 </div>
+		   <div class="errorMessage">
+		  	 	<span ng-if="frm.txtPhone.$error.required && frm.txtPhone.$dirty">手机号不能为空</span>
+		  	 	<span ng-if="frm.txtPhone.$error.pattern && frm.txtPhone.$dirty">请输入正确的手机号</span>
+		  	 	<span ng-if="user.responseCode">修改失败</span>
+		   </div>
+		 	<div>
+				<input type="button" class="loginBtn " ng-disabled="frm.txtPhone.$invalid " ng-class="{disabled:frm.txtPhone.$invalid}" value="确定" on-touch="modifyPhone()">
+			</div>
+		</div>
+	</form>
+  </ion-content>
+</ion-view>

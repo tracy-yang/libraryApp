@@ -1,0 +1,26 @@
+<ion-view view-title>
+	<!--搜索框-->
+ 	<ion-nav-buttons side="right">
+        <div class="buttons" ng-click="action.toMyHelpCenterPage()">
+           <div class="categroySearch">
+           		<i class="ion-ios-search-strong"></i>
+           		<input type="text" placeholder="请输入要查询的书籍名称"/>
+           </div>
+        </div>
+  	</ion-nav-buttons>
+  <ion-content class="bgColor">
+	<!--分类详情-->
+	<div class="content ionic-pseudo ">
+		<div class="list">
+		    <a class="item item-thumbnail-left categoryItem" href="#/bookDetail/{{i.id}}" ng-repeat="i in category.list">
+		    	<img ng-src="{{i.cover}}">
+		    	<h2>{{i.name}}</h2>
+				<p>作者：{{i.author.name}}</p>
+				<p>出版社：{{i.publisher.name}}</p>
+				<p>出版时间：{{i.publishDate}}</p>
+		    </a>
+		</div>
+	</div>
+       
+  </ion-content>
+</ion-view>

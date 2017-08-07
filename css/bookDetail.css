@@ -1,0 +1,92 @@
+.bookDetailWrapper > div:first-of-type {
+  background: #ffffff;
+  text-align: center;
+}
+.bookDetailImgWrapper {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  display: inline-block;
+}
+.bookDetailImgWrapper > img {
+  width: 100%;
+}
+.bookDetailInfo {
+  background: #f2f2f2;
+  /*显示为空的时候的样式*/
+}
+.bookDetailInfo > .bookDetailBaseInfo {
+  background: #ffffff;
+  padding: 0 0.5rem !important;
+}
+.bookDetailInfo > .bookDetailBaseInfo > h2 {
+  font-size: 16px;
+}
+.bookDetailInfo > .bookDetailBaseInfo > p:first-of-type {
+  font-size: 12px;
+  color: #666;
+  border-bottom: #f2f2f2 solid 1px;
+}
+.bookDetailInfo > .bookDetailBaseInfo > p:not(:first-of-type) {
+  padding: 0.3rem 0 !important;
+  border-bottom: #f2f2f2 solid 1px;
+}
+.bookDetailInfo > .bookDetailBaseInfo span:first-of-type {
+  color: #666;
+}
+.bookDetailInfo > div:not(:first-of-type) {
+  margin-top: 10px;
+  background: #ffffff;
+}
+.bookDetailInfo > div:not(:first-of-type) > h3 {
+  border-bottom: #f2f2f2 solid 1px;
+}
+.bookDetailInfo > div:not(:first-of-type) > p {
+  padding: 0.5rem !important;
+  line-height: 22px;
+  color: #333;
+}
+.bookDetailInfo p.empty {
+  color: #999 !important;
+}
+.bookDetailInfo > div:last-of-type {
+  margin-bottom: 45px;
+}
+/*********底部操作栏************/
+.bookDetailOperation {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  height: 42px;
+  background: #ffffff;
+  border-top: #f2f2f2 solid 1px;
+}
+.bookDetailOperation > div:first-of-type {
+  width: 7rem;
+  display: flex;
+  text-align: center;
+}
+.bookDetailOperation > div:first-of-type > div {
+  flex: 1;
+}
+.bookDetailOperation > div:first-of-type > div > i {
+  font-size: 20px;
+  color: #666;
+}
+.bookDetailOperation > div:first-of-type > div > p {
+  font-size: 12px;
+  color: #444;
+}
+.bookDetailOperation > div:nth-of-type(2) {
+  text-align: center;
+  flex: 1;
+}
+.bookDetailOperation > div:nth-of-type(2) > a {
+  line-height: 42px;
+  display: inline-block;
+  width: 100%;
+  background: #03B074;
+  color: #fff;
+}

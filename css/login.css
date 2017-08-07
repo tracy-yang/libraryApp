@@ -1,0 +1,57 @@
+a{
+	text-decoration: none;
+	color:#777;
+}
+.loginBg{
+	width: 100%;
+}
+.loginBg>img{
+	width: 100%;
+	display: block;
+}
+.loginWrapper{
+	background:#fff;
+	padding:0.5rem 0.5rem;
+}
+.loginWrapper>div>label{
+	color:#888;
+}
+.loginWrapper>div:nth-of-type(-n+2){
+	border-bottom: #f2f2f2 solid 1px;
+	padding: 0 0.5rem;
+	width: 100%;
+	padding-top: 0.5rem;
+}
+.loginWrapper>div:nth-of-type(3){
+	padding-left: 0.5rem;
+	font-size: 12px;
+	color:#e64340;
+	height: 0.8rem;
+}
+.loginWrapper>div:nth-of-type(4){
+	margin-top: 0.3rem;
+}
+.loginWrapper>div:last-of-type{
+	padding-top: 0.2rem;
+	text-align: right;
+	
+}
+.loginWrapper input[type=text]{
+	font-family: "microsoft yahei";
+	color:#333;
+	width: 100%;
+}
+
+.loginBtn{
+	width: 100%;
+	background:rgba(9,187,7,0.6);
+	color:#fff;
+	font-family: "microsoft yahei";
+	letter-spacing: 10px;
+}
+
+
+/*按钮禁用的样式*/
+input[type=button].disabled{
+	background:rgba(9,187,7,0.4);
+}

@@ -1,0 +1,21 @@
+<ion-view view-title="当前借阅">
+	<ion-nav-buttons side="right">
+        <div class="buttons">
+       	 <button class="button" ui-sref="tab.orderOld">历史记录</button>
+      </div>
+    </ion-nav-buttons>
+  <ion-content class="padding">
+   	 <div class="collectionList" >
+  	 	<ion-checkbox ng-show="data.showDelete" class="checkboxInlineBlock" ng-model="i.isChecked" ng-click="method.checkSingle()"></ion-checkbox>
+	  	<div>
+	  	 	<a class="item item-thumbnail-left collectionItem" ui-sref="bookDetail({cateId:'{{i.bookInfo.id}}'})">
+	          <img src="img/religion.png">
+	          <h2>书名</h2>
+	          <p>到期时间：</p>
+	          <p>借阅时间:</p>
+	          <p><button></button></p>
+	        </a>
+	  	</div>
+    </div>
+  </ion-content>
+</ion-view>

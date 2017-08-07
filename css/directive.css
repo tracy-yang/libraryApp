@@ -1,0 +1,35 @@
+/***********带搜索框的头部*****************/
+.navforsearch {
+  background: rgba(204, 204, 204, 0.1) !important;
+  height: 30px;
+  display: flex;
+}
+.navforsearch div {
+  width: 1rem;
+}
+.navforsearch div i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 30px;
+}
+.navforsearch .nav-search {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 4px;
+  height: 30px;
+  line-height: 30px;
+}
+.navforsearch .nav-search i {
+  color: #ccc;
+  padding-left: 10px;
+  font-size: 20px;
+}
+.navforsearch .nav-search input[type=text] {
+  display: inline-block;
+  background: none;
+  padding: 0 !important;
+  margin: 0;
+  vertical-align: top;
+  padding-left: 6px;
+  height: 30px;
+}

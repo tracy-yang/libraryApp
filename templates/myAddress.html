@@ -1,0 +1,34 @@
+<ion-view view-title="自提点地址" hide-tabs="true">
+	<!--返回按钮-->
+	<ion-nav-buttons side="right" >
+		<a class="lnkLineheight" ng-click="openPopover($event)" >
+			{{region.defaultRegionName}}
+			<i class="ion-ios-arrow-down"></i>
+		</a>
+			
+	</ion-nav-buttons>
+	
+  <ion-content class="myAddress-warpper">
+ 	<div class="myAddress-defaultWrapper">
+ 		<div ng-repeat="i in region.locationList | orderBy:'isDefault':true">
+ 			<h5>{{i.name}}</h5>
+ 			<p><i class="ion-ios-location"></i>{{i.address}}</p>
+ 			<p><span>开放时间:</span><span>{{i.description}}</span></p>
+ 			<p><span>联系电话：</span><span>{{i.phone}}</span></p>
+ 			<div class="rdoWrapper" >
+ 				<label for="rdo" on-touch="chooseDefaultLocation(i)">
+ 					<i ng-class="{'ion-ios-circle-outline':i.isDefault!=1,'ion-ios-checkmark':i.isDefault==1}"></i>
+ 					<span ng-if="i.isDefault!=1">设为默认</span><span ng-if="i.isDefault==1">默认地址</span>
+ 				</label>
+ 				<input type="radio" name="group" value="go" checked="checked" id="rdo" hidden> 
+ 			</div>
+ 		</div>
+ 	</div> 
+ 	
+  </ion-content>
+  <!--自提点为空的--->
+	<div class="locationEmpty" ng-if="region.locationList==null">
+		<img src="img/emptybox.png" alt="" />
+		<p>该地区暂时没有自提点，我们正在努力~</p>
+	</div>	
+</ion-view>

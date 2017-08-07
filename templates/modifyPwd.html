@@ -1,0 +1,36 @@
+<ion-view view-title="修改密码" hide-tabs="true">
+  <ion-content class="padding">
+  	<form novalidate name="frm">
+	  	<div class="editUserDetailInfo">
+	  		<div>
+				<label for="">原密码</label>
+				<div class="userInputInfo">
+					<input type="password" placeholder="请输入原密码" name="txtPwd" ng-model="user.pwd" required/><span ng-if="frm.txtPwd.$invalid && frm.txtPwd.$dirty"><i class="ion-ios-close-outline"></i></span>
+				</div>
+			</div>
+			<div>
+				<label for="">新密码</label>
+				<div class="userInputInfo">
+					<input type="password" placeholder="字母数字符号,6-20位" name="txtNewPwd" ng-model="user.newPwd" required pattern="\S{6,20}"/><span ng-if="frm.txtNewPwd.$valid"><i class="ion-ios-checkmark"></i></span><span ng-if="frm.txtNewPwd.$invalid && frm.txtNewPwd.$dirty"><i class="ion-ios-close-outline"></i></span>
+				</div>
+			</div>
+			<div>
+				<label for="">确认新密码</label>
+				<div class="userInputInfo">
+					<input type="password" placeholder="请再次输入密码" name="txtNewPwdConfirm" ng-model="user.newPwdConfirm" required/><span ng-if="user.newPwd == user.newPwdConfirm && frm.txtNewPwdConfirm.$dirty"><i class="ion-ios-checkmark"></i></span><span ng-if="user.newPwd != user.newPwdConfirm && frm.txtNewPwdConfirm.$dirty"><i class="ion-ios-close-outline"></i></span>
+				</div>
+			</div>
+			<div class="errorMessage">
+				<span ng-if="frm.txtPwd.$error.required && frm.txtPwd.$dirty || frm.txtNewPwd.$error.required && frm.txtNewPwd.$dirty">密码不能为空</span>
+				<span ng-if="frm.txtNewPwd.$error.pattern">密码格式不正确</span>
+				<span ng-if="user.newPwd != user.newPwdConfirm && frm.txtNewPwdConfirm.$dirty">两次密码不一致</span>
+				<span ng-if="user.code !=1">{{user.errorMessage}}</span>
+			</div>
+			<div>
+				<input type="button" class="loginBtn " ng-disabled="frm.txtPwd.$invalid || frm.txtNewPwd.$invalid || user.newPwd != user.newPwdConfirm" ng-class="{disabled:frm.txtPwd.$invalid || frm.txtNewPwd.$invalid || user.newPwd != user.newPwdConfirm}" value="确定" on-touch="modifyPwd()">
+			</div>
+	  	</div>
+  	</form>
+    
+  </ion-content>
+</ion-view>

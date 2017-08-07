@@ -1,0 +1,71 @@
+<ion-view view-title="图书详情">
+	<!--返回按钮-->
+	<ion-nav-buttons side="left">
+		<button class="button button-icon" ng-click="goback()">
+			<i class="icon ion-ios-arrow-back"></i>
+		</button>
+	</ion-nav-buttons>
+	
+  <ion-content  class="bgColor">
+  	<!--书本的详细信息-->
+  	<div class="bookDetailWrapper">
+  		<div>
+  			<div  class="bookDetailImgWrapper">
+    			<img ng-src="{{book.bookDetail.cover}}" alt="" />
+	   		</div>
+  		</div>
+  		
+		<!----书本信息------->
+	    <div class="bookDetailInfo">
+	    	<!--基本信息-->
+	    	<div class="bookDetailBaseInfo">
+		    	<h2>{{book.bookDetail.name}}</h2>
+		    	<p>{{book.bookDetail.description}}</p>
+		    	<p><span>作者：</span><span>{{book.bookDetail.author.name}}</span></p>
+		    	<p><span>出版社：</span><span>{{book.bookDetail.publisher.name}}</span></p>
+	    	</div>
+	    	
+	    	<!--介绍-->
+	    	<div>
+	    		<h3>简介</h3>
+	    		<p ng-if="book.bookDetail.introduce != null">{{book.bookDetail.introduce}}</p>
+	    		<p ng-if="book.bookDetail.introduce == null" ng-class="{empty:book.bookDetail.introduce == null}">暂无介绍~</p>
+	    	</div>
+	    	<!--媒体评论-->
+	    	<div>
+	    		<h3>媒体评论</h3>
+	    		<p ng-if="book.bookDetail.mediaComment != null">{{book.bookDetail.mediaComment}}</p>
+	    		<p ng-if="book.bookDetail.mediaComment == null" ng-class="{empty:book.bookDetail.mediaComment == null}">暂无评论~</p>
+	    	</div>
+	    	
+	    	<!--评论-->
+	    	<div>
+	    		<h3>评论</h3>
+	    		<p class="empty">暂无评论~</p>
+	    	</div>
+	    </div>
+  	</div>
+  	
+  	
+  	
+    
+  </ion-content>
+  <!--底部操作栏-->
+	<div class="bookDetailOperation">
+		<div>
+			<div ng-click="book.addCollection()">
+				<i ng-class="{'ion-ios-heart-outline':!book.code,'ion-ios-heart':book.code}"></i>
+				<p ng-if="!book.flag">收藏</p>
+				<p ng-if="book.code">已收藏</p>
+			</div>
+			<div ui-sref="tab.account">
+				<i class="ion-ios-cart-outline"></i>
+				<p >借书架</p>
+			</div>
+			
+		</div>
+		<div>
+			<a href="javascript:void(0)" ng-click="book.addCart()">加入借书架</a>
+		</div>
+	</div>
+</ion-view>

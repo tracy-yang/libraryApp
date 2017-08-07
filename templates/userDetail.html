@@ -1,0 +1,21 @@
+<ion-view view-title="个人信息" hide-tabs="true">
+  <ion-content class="padding ">
+  	<div class="userDetailInfo">
+  		<div ng-click="show()">
+	  		<div>头像</div><div>
+	  			<span class="userDetailImgWrapper"><img ng-src="img/{{account.headerImage}}" alt="" /></span>
+	  		</div><div><i class="ion-ios-arrow-right"></i></div>
+	  	</div>
+	   	<div on-touch="modifyPhone()">
+	   		<div>手机号码</div><div>{{user.detailInfo.phone}}</div><div><i class="ion-ios-arrow-right"></i></div>
+	   	</div>
+	   	<div on-touch="modifyPwd()">
+	   		<div>修改密码</div><div></div><div><i class="ion-ios-arrow-right"></i></div>
+	   	</div>
+	   	<div on-touch="modifyEmail()">
+	   		<div>邮箱</div><div>{{user.detailInfo.email}}</div><div><i class="ion-ios-arrow-right"></i></div>
+	   	</div>
+	</div>
+
+  </ion-content>
+</ion-view>

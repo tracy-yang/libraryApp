@@ -1,0 +1,18 @@
+<ion-view view-title="分类">
+  <ion-content>
+    
+    <!--分类列表-->
+    <div class="cateWrapper">
+    	<div ng-repeat="i in categories" ng-click="toBookListByCategory(i)">
+    		<div class="cateInfo">
+    			<div>
+	    			<img ng-src="img/{{i.img}}" alt="" />
+	    		</div>
+	    		<p>{{i.name}}</p>
+    		</div>
+    		
+    	</div>
+    	
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,30 @@
+<ion-view view-title="确认借阅信息" hide-tabs="true">
+  <ion-content class="padding">
+  	<div class="blockDiv">
+  		<h3>借阅信息</h3>
+	   	 <div class="collectionList" ng-repeat="i in cartList.orderList" >
+		  	<div >
+		  	 	<a class="item item-thumbnail-left collectionItem">
+		          <img ng-src="{{i.cover}}">
+		          <h2>{{i.name}}</h2>
+		          <p>作者：{{i.author.name}}</p>
+		          <p>数量：1</p>
+		        </a>
+		  	</div>
+	    </div>
+  	</div>
+  	
+    <div class="blockDiv">
+    	<h3>自提点信息</h3>
+	    <div >
+				<h5>{{data.defaultLocation.name}}</h5>
+				<p><i class="ion-ios-location"></i>{{data.defaultLocation.address}}</p>
+				<p><span>开放时间:</span><span>{{data.defaultLocation.description}}</span></p>
+				<p><span>联系电话：</span><span>{{data.defaultLocation.phone}}</span></p>
+			</div>
+    </div>
+  </ion-content>
+  <div class="bookDetailOperation">
+		<button ng-click="cartList.order()">确认借阅</button>
+	</div>
+</ion-view>

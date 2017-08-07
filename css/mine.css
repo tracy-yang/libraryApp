@@ -1,0 +1,97 @@
+.bgColor {
+  background: #f2f2f2 !important;
+}
+.mineheader {
+  display: flex;
+  padding: 0.5rem;
+  border-bottom: #f2f2f2 solid 1px;
+}
+.mineheader > div:first-of-type {
+  width: 2.5rem;
+}
+.mineheader > span:first-of-type {
+  display: inline-block;
+  width: 3rem;
+  line-height: 48px;
+}
+.mineheader > span:first-of-type i {
+  padding-left: 6px;
+}
+.mineheader > span:nth-of-type(2) {
+  display: inline-block;
+  flex: 1;
+  line-height: 20px;
+}
+.mineheader > span:nth-of-type(2) > p:not(:first-of-type) {
+  font-size: 12px;
+  color: #b2b2b2;
+}
+.mineheader .userDetail {
+  width: 1rem;
+  text-align: center;
+  font-size: 18px;
+  color: #999;
+  line-height: 48px;
+}
+p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.borrow-collection {
+  display: flex;
+  padding: 6px 0;
+}
+.borrow-collection > div {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+.borrow-collection > div > p {
+  font-size: 12px;
+  color: #333333;
+}
+.borrow-collection > div > i {
+  font-size: 24px;
+}
+.borrow-collection > div > span {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  font-size: 12px;
+  color: #fff;
+  line-height: 14px;
+  position: absolute;
+  left: 53%;
+  background: red !important;
+}
+.butCancel {
+  padding: 0 0.5rem;
+}
+.butCancel > button {
+  font-family: "microsoft yahei";
+  letter-spacing: 2px;
+}
+.list {
+  background: #f2f2f2;
+}
+.list > div {
+  margin-top: 10px;
+  background: #fff;
+  color: #666;
+}
+.list > div i:first-of-type {
+  color: #03B074;
+  font-size: 18px;
+}
+.list > div i:last-of-type {
+  font-size: 16px;
+  color: #999;
+}
+.list > div .item {
+  font-size: 15px;
+  padding-left: 45px;
+}
+.list > div:first-of-type {
+  margin-top: 0px;
+}
